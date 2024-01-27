@@ -10,3 +10,7 @@
 body {
   font-family: Poppins;
 }
+
+p {
+  font-weight: 300;
+}
