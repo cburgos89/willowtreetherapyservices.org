@@ -1,6 +1,5 @@
 <header>
     <div class="row">
-        <div class="logo"></div>
         <nav>
             <div class="hamburger"></div>
             <ul class="nav-links">

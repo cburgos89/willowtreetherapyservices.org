@@ -4,15 +4,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #43766c;
+  --secondary-color: #f8fae5;
+  --theme-color-01: #b19470;
+  --theme-color-02: #76453b;
+  --text: #1b1b1b;
 }
 
 body {
   font-family: Poppins;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  color: var(--text);
+}
+
 p {
   font-weight: 300;
+}
+
+a {
+  color: white;
+}
+a:visited {
+  color: white;
 }
 
 section {
@@ -28,11 +53,179 @@ section h3 {
   font-size: 1.4rem;
 }
 
+#container {
+  width: 100%;
+}
+
 .row {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .column {
   display: flex;
   flex-direction: column;
+}
+
+/* Contact Bar */
+.contact-bar {
+  background-color: var(--secondary-color);
+}
+
+.contact-bar .row {
+  justify-content: space-between;
+}
+
+.call-to-action-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 6px;
+}
+
+.call-to-action-button-top {
+  padding: 10px 0px;
+}
+
+.schedule {
+  margin-left: 14px;
+}
+
+.call-to-action-button-top a {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2.2px;
+  border-radius: 3px;
+  border: var(--primary-color) 1px solid;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.call-to-action-button-top a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.address-top,
+.phone-top {
+  text-align: right;
+  padding: 3px;
+}
+
+.phone-top a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.phone-top a:hover {
+  color: var(--primary-color);
+}
+
+/* Navigation Bar */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.nav-links li a {
+  padding: 16px 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Hero */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/images/willow-tree-hero-bg.jpeg);
+  background-size: cover;
+  height: 500px;
+}
+
+#hero h1 {
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 10px 10px 20px rgb(49, 49, 49);
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.call-to-action-button {
+  background-color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+  border: solid var(--primary-color) 3px;
+}
+.call-to-action-button a {
+  color: var(--primary-color);
+  padding: 21px;
+  text-decoration: none;
+  letter-spacing: 2.6px;
+  font-size: 1.3rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.call-to-action-button a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Welcome */
+
+/* Short-Bio */
+
+/* Get-Started */
+
+/* Map */
+#map {
+  background-color: var(--theme-color-01);
+}
+
+/* Footer */
+footer {
+  background-color: var(--theme-color-02);
+  padding: 40px;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
+
+footer p:first-of-type {
+  margin-bottom: 40px;
+}
+
+footer a {
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color);
 }

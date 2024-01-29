@@ -29,8 +29,12 @@
               <a href="#">Schedule an Appointment</a>
             </div>
           </div>
-          <div class="address-top"></div>
-          <div class="phone-top"></div>
+          <div class="address-top">
+            <p>6924 E Mount Vernon St Suite 107, Glen St Mary, Fl 32040</p>
+          </div>
+          <div class="phone-top">
+            <p><a href="tel:9043465299">(904) 349-5299</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -41,6 +45,9 @@
     <main>
       <section id="hero">
         <h1>Willow Tree Therapy Services, LLC</h1>
+        <div class="call-to-action-button">
+          <a href="#">Schedule an Appointment Today</a>
+        </div>
       </section>
 
       <section id="welcome">
@@ -74,6 +81,7 @@
       </section>
 
       <footer>
+        <p><a href="#">Privacy Policy</a></p>
         <p>Copyright &copy; Willow Tree Therapy Services, LLC. All rights reserved.</p>
         <p>Website made by <a href="https://coreyburgos.com" target="_blank" referrerpolicy="no-referer">Corey Burgos</a></p>
       </footer>
