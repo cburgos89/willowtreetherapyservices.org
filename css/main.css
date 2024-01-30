@@ -41,6 +41,10 @@ a:visited {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 60px 0 60px 0;
 }
 section h1 {
@@ -52,6 +56,9 @@ section h2 {
 section h3 {
   font-size: 1.4rem;
 }
+section p {
+  font-size: 1.14rem;
+}
 
 #container {
   width: 100%;
@@ -61,8 +68,8 @@ section h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .column {
@@ -86,15 +93,15 @@ section h3 {
   padding: 6px;
 }
 
-.call-to-action-button-top {
+.call-to-action-button {
   padding: 10px 0px;
 }
 
-.schedule {
+.call-to-action-top .schedule {
   margin-left: 14px;
 }
 
-.call-to-action-button-top a {
+.call-to-action-button a {
   background-color: white;
   color: var(--primary-color);
   padding: 10px 14px;
@@ -106,7 +113,7 @@ section h3 {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.call-to-action-button-top a:hover {
+.call-to-action-button a:hover {
   background-color: var(--primary-color);
   color: white;
 }
@@ -166,7 +173,7 @@ header {
   justify-content: center;
   background-image: url("/images/willow-tree-hero-bg.jpeg");
   background-size: cover;
-  height: 500px;
+  height: 80vh;
 }
 
 #hero h1 {
@@ -177,13 +184,13 @@ header {
   text-align: center;
 }
 
-.call-to-action-button {
+.call-to-action-button-hero {
   background-color: white;
   padding: 20px 0;
   margin-top: 40px;
   border: solid var(--primary-color) 3px;
 }
-.call-to-action-button a {
+.call-to-action-button-hero a {
   color: var(--primary-color);
   padding: 21px;
   text-decoration: none;
@@ -191,7 +198,7 @@ header {
   font-size: 1.3rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-.call-to-action-button a:hover {
+.call-to-action-button-hero a:hover {
   background-color: var(--primary-color);
   color: white;
 }
@@ -199,15 +206,27 @@ header {
 /* Welcome */
 
 /* Short-Bio */
+#short-bio {
+  background-color: var(--secondary-color);
+}
 .short-bio-column-1 img {
   width: 300px;
 }
 
 /* Get-Started */
+#get-started {
+  background-color: var(--theme-color-01);
+}
 
 /* Map */
 #map {
-  background-color: var(--theme-color-01);
+  background-color: var(--primary-color);
+  padding: 0;
+  padding-bottom: 6px;
+}
+
+#map iframe {
+  width: 100%;
 }
 
 /* Footer */
@@ -221,14 +240,19 @@ footer p {
   text-align: center;
 }
 
-footer p:first-of-type {
-  margin-bottom: 40px;
-}
-
 footer a {
   transition: color 0.2s ease;
 }
 
 footer a:hover {
   color: var(--primary-color);
+}
+
+footer .contact {
+  margin-left: 10px;
+}
+
+.privacy-link {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
