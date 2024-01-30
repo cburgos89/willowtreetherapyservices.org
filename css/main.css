@@ -199,6 +199,9 @@ header {
 /* Welcome */
 
 /* Short-Bio */
+.short-bio-column-1 img {
+  width: 300px;
+}
 
 /* Get-Started */
 
