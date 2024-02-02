@@ -52,12 +52,17 @@ section h1 {
 }
 section h2 {
   font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 section h3 {
   font-size: 1.4rem;
 }
 section p {
   font-size: 1.14rem;
+  margin-bottom: 20px;
+}
+section .row {
+  max-width: 1200px;
 }
 
 #container {
@@ -67,7 +72,6 @@ section p {
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -204,18 +208,69 @@ header {
 }
 
 /* Welcome */
+#welcome h2 {
+  margin-bottom: 20px;
+}
+#welcome p {
+  margin-bottom: 20px;
+}
 
 /* Short-Bio */
 #short-bio {
   background-color: var(--secondary-color);
 }
+#short-bio .row {
+  max-width: 900px;
+}
 .short-bio-column-1 img {
   width: 300px;
+}
+.short-bio-column-2 {
+  margin-left: 60px;
 }
 
 /* Get-Started */
 #get-started {
   background-color: var(--theme-color-01);
+}
+#get-started a {
+  text-decoration: none;
+  margin: 0px 60px;
+  width: 100%;
+}
+#get-started h2 {
+  margin-bottom: 60px;
+}
+
+.get-started-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.get-started-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 20px rgb(44, 44, 44);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.get-started-card img:hover {
+  transform: translateY(-30px);
+  box-shadow: 5px 5px 40px rgb(44, 44, 44);
+}
+
+.get-started-card hr {
+  width: 100%;
+  border: solid 1px var(--primary-color);
+  margin: 20px 0;
+}
+
+.get-started-card p {
+  text-align: center;
 }
 
 /* Map */
