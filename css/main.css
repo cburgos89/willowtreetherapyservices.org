@@ -148,6 +148,7 @@ header {
 }
 
 .nav-links {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,6 +171,12 @@ header {
   color: var(--primary-color);
 }
 
+.sub-menu {
+  position: absolute;
+  top: 58px;
+  background-color: black;
+}
+
 /* Hero */
 #hero {
   display: flex;
@@ -178,7 +185,7 @@ header {
   justify-content: center;
   background-image: url("../images/willow-tree-hero-bg.jpeg");
   background-size: cover;
-  height: 80vh;
+  height: 77.3vh;
 }
 
 #hero h1 {
