@@ -7,10 +7,10 @@
 }
 
 :root {
-  --primary-color: #43766c;
-  --secondary-color: #f8fae5;
-  --theme-color-01: #b19470;
-  --theme-color-02: #76453b;
+  --primary-color: #12372a;
+  --secondary-color: #436850;
+  --theme-color-01: #adbc9f;
+  --theme-color-02: #fbfada;
   --text: #1b1b1b;
 }
 
@@ -83,7 +83,7 @@ section .row {
 
 /* Contact Bar */
 .contact-bar {
-  background-color: var(--secondary-color);
+  background-color: var(--theme-color-02);
 }
 
 .contact-bar .row {
@@ -113,7 +113,7 @@ section .row {
   font-size: 0.8rem;
   letter-spacing: 2.2px;
   border-radius: 3px;
-  border: var(--primary-color) 1px solid;
+  border: var(--secondary-color) 1px solid;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -143,7 +143,8 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  z-index: 999;
 }
 
 .nav-links {
@@ -182,17 +183,28 @@ header {
 
 #hero h1 {
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
-  font-size: 3.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+#hero h2 {
+  color: var(--theme-color-02);
+  font-size: 1.74rem;
+  letter-spacing: 2.4px;
+  text-align: center;
+  text-shadow: 10px 10px 20px rgb(49, 49, 49);
+  margin-bottom: 30px;
 }
 
 .call-to-action-button-hero {
   background-color: white;
   padding: 20px 0;
-  margin-top: 40px;
-  border: solid var(--primary-color) 3px;
+  margin: 0 auto;
+  border: solid var(--secondary-color) 3px;
+  text-align: center;
 }
 .call-to-action-button-hero a {
   color: var(--primary-color);
@@ -217,7 +229,7 @@ header {
 
 /* Short-Bio */
 #short-bio {
-  background-color: var(--secondary-color);
+  background-color: var(--theme-color-01);
 }
 #short-bio .row {
   max-width: 900px;
@@ -231,7 +243,7 @@ header {
 
 /* Get-Started */
 #get-started {
-  background-color: var(--theme-color-01);
+  background-color: var(--theme-color-02);
 }
 #get-started a {
   text-decoration: none;
@@ -286,7 +298,7 @@ header {
 
 /* Footer */
 footer {
-  background-color: var(--theme-color-02);
+  background-color: var(--primary-color);
   padding: 40px;
 }
 
@@ -300,7 +312,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--primary-color);
+  color: var(--theme-color-01);
 }
 
 footer .contact {
