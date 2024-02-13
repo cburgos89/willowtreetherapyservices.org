@@ -61,9 +61,6 @@ section p {
   font-size: 1.14rem;
   margin-bottom: 20px;
 }
-section .row {
-  max-width: 1200px;
-}
 
 #container {
   width: 100%;
@@ -74,6 +71,7 @@ section .row {
   justify-content: center;
   margin-left: 10%;
   margin-right: 10%;
+  max-width: 1200px;
 }
 
 .column {
@@ -87,12 +85,14 @@ section .row {
 }
 
 .contact-bar .row {
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .call-to-action-top {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: 6px;
 }
@@ -124,7 +124,7 @@ section .row {
 
 .address-top,
 .phone-top {
-  text-align: right;
+  text-align: center;
   padding: 3px;
 }
 
@@ -156,13 +156,14 @@ header {
 
 .nav-links li {
   list-style: none;
-  padding: 15px 0;
 }
 
 .nav-links li a {
+  position: relative;
+  display: block;
   padding: 16px 25px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -173,9 +174,8 @@ header {
 
 .sub-menu {
   position: absolute;
-  top: 58px;
-  background-color: black;
-  width: max-content;
+  top: 56px;
+  background-color: rgba(0, 0, 0, 0.622);
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -183,58 +183,87 @@ header {
 }
 
 .sub-menu li a {
-  width: 100%;
+  display: block;
 }
 
-nav li:hover .sub-menu {
+.nav-links li:hover .sub-menu {
   max-height: max-content;
+  max-width: max-content;
   overflow: visible;
-  background-color: black;
-  width: max-content;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 /* Hero */
 #hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url("../images/willow-tree-hero-bg.jpeg");
   background-size: cover;
-  height: 77.3vh;
+}
+
+#hero .background-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 #hero h1 {
   color: white;
   letter-spacing: 3px;
+  line-height: 35px;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
-  font-size: 2.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
 }
 
 #hero h2 {
   color: var(--theme-color-02);
-  font-size: 1.74rem;
+  font-size: 1.2rem;
   letter-spacing: 2.4px;
+  line-height: 25px;
   text-align: center;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
   margin-bottom: 30px;
 }
 
+#hero .row {
+  width: 600px;
+}
+
+#hero .column {
+  align-items: center;
+  z-index: 1;
+}
+
+#hero .logo {
+  background-image: url(../images/WillowTreeLogo_Circle.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+}
+
 .call-to-action-button-hero {
   background-color: white;
-  padding: 20px 0;
-  margin: 0 auto;
+  margin-top: 20px;
   border: solid var(--secondary-color) 3px;
   text-align: center;
 }
 .call-to-action-button-hero a {
+  display: block;
   color: var(--primary-color);
-  padding: 21px;
   text-decoration: none;
+  padding: 10px 20px;
   letter-spacing: 2.6px;
   font-size: 1.3rem;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -267,9 +296,7 @@ nav li:hover .sub-menu {
 }
 
 /* Get-Started */
-#get-started {
-  background-color: var(--theme-color-02);
-}
+
 #get-started a {
   text-decoration: none;
   margin: 0px 60px;
