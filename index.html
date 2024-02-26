@@ -81,9 +81,12 @@
       <main>
         <section id="hero">
           <div class="background-overlay"></div>
+          <div class="hero-background"></div>
           <div class="row">
-            <div class="column">
+            <div class="column hero-column-1">
               <div class="logo"></div>
+            </div>
+            <div class="column hero-column-2">
               <h1>Cultivating Tender Roots at Willow Tree Therapy Services</h1>
               <h2>
                 Your Child's Emotional Sanctuary for Positive Transformation
@@ -236,6 +239,17 @@
         </footer>
       </main>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var heroBackground = document.querySelector(".hero-background");
+
+        window.addEventListener("scroll", function () {
+          var scrollTop = window.scrollY;
+          heroBackground.style.backgroundPositionY = scrollTop / 2 + "px";
+        });
+      });
+    </script>
 
     <script src="js/main.js"></script>
   </body>

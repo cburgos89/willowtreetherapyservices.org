@@ -81,7 +81,9 @@ section p {
 
 /* Contact Bar */
 .contact-bar {
+  position: relative;
   background-color: var(--theme-color-02);
+  z-index: 50;
 }
 
 .contact-bar .row {
@@ -198,11 +200,10 @@ header {
 #hero {
   position: relative;
   display: flex;
+  min-height: 500px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/willow-tree-hero-bg.jpeg");
-  background-size: cover;
 }
 
 #hero .background-overlay {
@@ -211,6 +212,16 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+#hero .hero-background {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  background-image: url("../images/willow-tree-hero-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 #hero h1 {
@@ -234,7 +245,8 @@ header {
 }
 
 #hero .row {
-  width: 600px;
+  align-items: center;
+  width: 1200px;
 }
 
 #hero .column {
@@ -249,8 +261,15 @@ header {
   background-size: contain;
   width: 350px;
   height: 350px;
-  margin-bottom: 40px;
   border-radius: 50%;
+  box-shadow: 0 0 0px rgb(190, 221, 190);
+  transform: scale(1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#hero .logo:hover {
+  box-shadow: 0 0 50px rgb(190, 221, 190);
+  transform: scale(1.05);
 }
 
 .call-to-action-button-hero {
@@ -274,6 +293,11 @@ header {
 }
 
 /* Welcome */
+#welcome {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
 #welcome h2 {
   margin-bottom: 20px;
 }
@@ -319,12 +343,12 @@ header {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 40px;
-  box-shadow: 1px 1px 20px rgb(44, 44, 44);
+  box-shadow: 1px 1px 8px rgb(44, 44, 44);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .get-started-card img:hover {
   transform: translateY(-30px);
-  box-shadow: 5px 5px 40px rgb(44, 44, 44);
+  box-shadow: 1px 1px 20px rgb(44, 44, 44);
 }
 
 .get-started-card hr {
