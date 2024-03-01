@@ -52,14 +52,12 @@ section h1 {
 }
 section h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
 }
 section h3 {
   font-size: 1.4rem;
 }
 section p {
   font-size: 1.14rem;
-  margin-bottom: 20px;
 }
 
 #container {
@@ -81,14 +79,13 @@ section p {
 
 /* Contact Bar */
 .contact-bar {
+  display: block;
   position: relative;
   background-color: var(--theme-color-02);
   z-index: 50;
 }
 
-.contact-bar .row {
-  justify-content: center;
-  align-items: center;
+.contact-bar.row {
   padding: 10px 0;
 }
 
@@ -206,6 +203,15 @@ header {
   justify-content: center;
 }
 
+#hero .row {
+  max-width: 700px;
+}
+
+#hero .column {
+  align-items: center;
+  z-index: 1;
+}
+
 #hero .background-overlay {
   position: absolute;
   height: 100%;
@@ -224,13 +230,27 @@ header {
   z-index: 0;
 }
 
+#hero img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 0px rgb(190, 221, 190);
+  transform: scale(1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+#hero img:hover {
+  box-shadow: 0 0 50px rgb(190, 221, 190);
+  transform: scale(1.05);
+}
+
 #hero h1 {
   color: white;
   letter-spacing: 3px;
   line-height: 35px;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
   font-size: 2rem;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -241,35 +261,20 @@ header {
   line-height: 25px;
   text-align: center;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
-  margin-bottom: 30px;
+}
+
+#hero h2:first-of-type {
+  margin-bottom: 14px;
+}
+
+#hero h2:last-of-type {
+  margin-top: 14px;
+  margin-bottom: 40px;
 }
 
 #hero .row {
   align-items: center;
-  width: 1200px;
-}
-
-#hero .column {
-  align-items: center;
-  z-index: 1;
-}
-
-#hero .logo {
-  background-image: url(../images/WillowTreeLogo_Circle.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  box-shadow: 0 0 0px rgb(190, 221, 190);
-  transform: scale(1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-#hero .logo:hover {
-  box-shadow: 0 0 50px rgb(190, 221, 190);
-  transform: scale(1.05);
+  width: 600px;
 }
 
 .call-to-action-button-hero {
@@ -285,6 +290,7 @@ header {
   padding: 10px 20px;
   letter-spacing: 2.6px;
   font-size: 1.3rem;
+  font-weight: 300;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .call-to-action-button-hero a:hover {
@@ -292,42 +298,48 @@ header {
   color: white;
 }
 
-/* Welcome */
-#welcome {
+/* Short-Bio */
+#short-bio {
   position: relative;
   z-index: 10;
   background-color: white;
 }
-#welcome h2 {
-  margin-bottom: 20px;
-}
-#welcome p {
-  margin-bottom: 20px;
-}
-
-/* Short-Bio */
-#short-bio {
-  background-color: var(--theme-color-01);
-}
 #short-bio .row {
   max-width: 900px;
+}
+#short-bio h2 {
+  margin-bottom: 20px;
+}
+#short-bio p {
+  margin-bottom: 20px;
 }
 .short-bio-column-1 img {
   width: 300px;
 }
 .short-bio-column-2 {
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 /* Get-Started */
-
+#get-started {
+  background-color: var(--theme-color-01);
+}
 #get-started a {
   text-decoration: none;
-  margin: 0px 60px;
+  margin: 0px 20px;
   width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
+#get-started a:hover {
+  transform: scale(1.03);
+}
+
 #get-started h2 {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+#get-started .row {
+  max-width: 900px;
 }
 
 .get-started-card {
@@ -335,6 +347,16 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 600px;
+  padding: 50px;
+  background-color: var(--theme-color-02);
+  box-shadow: 0 0 20px #1b1b1b3d;
+  transition: background-color 0.6s ease, box-shadow 0.3s ease;
+}
+
+.get-started-card:hover {
+  background-color: white;
+  box-shadow: 0 0 40px #1b1b1b95;
 }
 
 .get-started-card img {
@@ -343,12 +365,6 @@ header {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 40px;
-  box-shadow: 1px 1px 8px rgb(44, 44, 44);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.get-started-card img:hover {
-  transform: translateY(-30px);
-  box-shadow: 1px 1px 20px rgb(44, 44, 44);
 }
 
 .get-started-card hr {
