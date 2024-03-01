@@ -79,7 +79,8 @@ section p {
 
 /* Contact Bar */
 .contact-bar {
-  display: block;
+  display: flex;
+  justify-content: center;
   position: relative;
   background-color: var(--theme-color-02);
   z-index: 50;
@@ -139,6 +140,8 @@ section p {
 
 /* Navigation Bar */
 header {
+  display: flex;
+  justify-content: center;
   position: sticky;
   top: 0;
   width: 100%;
@@ -197,14 +200,14 @@ header {
 #hero {
   position: relative;
   display: flex;
-  min-height: 500px;
+  min-height: 600px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 #hero .row {
-  max-width: 700px;
+  align-items: center;
 }
 
 #hero .column {
@@ -231,6 +234,7 @@ header {
 }
 
 #hero img {
+  position: relative;
   width: 350px;
   height: 350px;
   border-radius: 50%;
@@ -238,6 +242,8 @@ header {
   transform: scale(1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   margin-bottom: 30px;
+  margin-right: 40px;
+  z-index: 2;
 }
 
 #hero img:hover {
@@ -248,33 +254,28 @@ header {
 #hero h1 {
   color: white;
   letter-spacing: 3px;
-  line-height: 35px;
+  line-height: 45px;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
 #hero h2 {
   color: var(--theme-color-02);
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   letter-spacing: 2.4px;
-  line-height: 25px;
+  line-height: 33px;
   text-align: center;
   text-shadow: 10px 10px 20px rgb(49, 49, 49);
 }
 
 #hero h2:first-of-type {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 #hero h2:last-of-type {
-  margin-top: 14px;
+  margin-top: 20px;
   margin-bottom: 40px;
-}
-
-#hero .row {
-  align-items: center;
-  width: 600px;
 }
 
 .call-to-action-button-hero {
@@ -320,9 +321,41 @@ header {
   margin-left: 40px;
 }
 
+/* Home Quote */
+#home-quote {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("/images/children-playing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#home-quote .background-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.736);
+  z-index: 1;
+}
+#home-quote p {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 0 10px var(--theme-color-01);
+  color: white;
+  z-index: 2;
+}
+
+.signature {
+  margin-top: 24px;
+}
+
 /* Get-Started */
 #get-started {
+  position: relative;
   background-color: var(--theme-color-01);
+  z-index: 2;
 }
 #get-started a {
   text-decoration: none;
@@ -405,6 +438,10 @@ footer a {
 
 footer a:hover {
   color: var(--theme-color-01);
+}
+
+footer .row {
+  max-width: unset;
 }
 
 footer .contact {
