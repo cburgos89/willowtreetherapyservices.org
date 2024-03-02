@@ -325,7 +325,7 @@ header {
 #home-quote {
   padding-top: 120px;
   padding-bottom: 120px;
-  background-image: url("/images/children-playing.jpg");
+  background-image: url("../images/children-playing.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
