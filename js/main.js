@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load initial content for header, aside, and footer
   loadContent("includes/top-cta.html", "topCtaContent");
   loadContent("includes/header.html", "headerContent");
-  loadContent("includes/aside.html", "asideContent");
   loadContent("includes/footer.html", "footerContent");
+  loadContent("includes/cards.html", "get-started");
+  loadContent("includes/map.html", "map");
 
   // You can add event listeners or additional functionality here
 });
