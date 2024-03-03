@@ -17,7 +17,7 @@
       <main>
         <section id="page-title">
           <div class="background-overlay"></div>
-          <div class="hero-background"></div>
+          <div class="title-background"></div>
           <div class="row">
             <div class="column">
               <h1>About Willow Tree Therapy Services</h1>
@@ -53,6 +53,7 @@
                 forward to their own self-actualization through empathetic
                 understanding and communicating through their language of play.
               </p>
+              <img src="images/image-asset-03.jpeg" alt="" />
             </div>
           </div>
         </section>
@@ -67,11 +68,11 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var heroBackground = document.querySelector(".hero-background");
+        var titleBackground = document.querySelector(".title-background");
 
         window.addEventListener("scroll", function () {
           var scrollTop = window.scrollY;
-          heroBackground.style.backgroundPositionY = scrollTop / 2 + "px";
+          titleBackground.style.backgroundPositionY = scrollTop / 2 + "px";
         });
       });
     </script>

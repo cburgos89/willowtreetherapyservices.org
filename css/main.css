@@ -58,11 +58,11 @@ section h3 {
 }
 section p {
   font-size: 1.14rem;
+  margin-bottom: 20px;
 }
 
 #container {
   width: 100%;
-  overflow-x: hidden;
 }
 
 .row {
@@ -216,7 +216,7 @@ header {
   z-index: 1;
 }
 
-#hero .background-overlay {
+.background-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -452,4 +452,29 @@ footer .contact {
 .privacy-link {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+/** Pages **/
+#page-title {
+  min-height: 300px;
+}
+
+#page-title h1 {
+  color: white;
+}
+
+.title-background {
+  position: absolute;
+  background-image: url("../images/title-background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200%;
+  width: 100%;
+  z-index: 0;
+}
+
+#page-title .row {
+  position: relative;
+  z-index: 2;
 }
