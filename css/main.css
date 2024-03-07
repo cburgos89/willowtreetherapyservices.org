@@ -79,16 +79,14 @@ section p {
 }
 
 /* Contact Bar */
+
 .contact-bar {
   display: flex;
   justify-content: center;
   position: relative;
   background-color: var(--theme-color-02);
   z-index: 50;
-}
-
-.contact-bar.row {
-  padding: 10px 0;
+  padding: 30px 0;
 }
 
 .call-to-action-top {
@@ -102,7 +100,7 @@ section p {
   padding: 10px 0px;
 }
 
-.call-to-action-top .schedule {
+.call-to-action-top .portal {
   margin-left: 14px;
 }
 
@@ -111,16 +109,35 @@ section p {
   color: var(--primary-color);
   padding: 10px 14px;
   text-decoration: none;
-  font-size: 0.8rem;
-  letter-spacing: 2.2px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border-radius: 3px;
   border: var(--secondary-color) 1px solid;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
 .call-to-action-button a:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+.call-to-action-button.crisis a {
+  background-color: rgb(232, 71, 71);
+  color: white;
+  border: var(--text) 1px solid;
+}
+.call-to-action-button.crisis a:hover {
+  background-color: rgb(71, 15, 15);
+}
+
+.call-to-action-button.portal a {
+  background-color: var(--secondary-color);
+  color: white;
+  border: var(--text) 1px solid;
+}
+
+.call-to-action-button.portal a:hover {
+  background-color: var(--primary-color);
 }
 
 .address-top,
@@ -129,14 +146,20 @@ section p {
   padding: 3px;
 }
 
+.phone-top p,
 .phone-top a {
   color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
   text-decoration: none;
+}
+
+.phone-top a {
   transition: color 0.2s ease;
 }
 
 .phone-top a:hover {
-  color: var(--primary-color);
+  color: var(--theme-color-01);
 }
 
 /* Navigation Bar */
