@@ -476,8 +476,8 @@ footer .row {
   max-width: unset;
 }
 
-footer .contact {
-  margin-left: 10px;
+.phone-bottom {
+  text-align: center;
 }
 
 .privacy-link {
