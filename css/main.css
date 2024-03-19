@@ -515,3 +515,7 @@ footer .row {
   z-index: 2;
   background-color: white;
 }
+
+.main-pages a {
+  color: var(--secondary-color);
+}
